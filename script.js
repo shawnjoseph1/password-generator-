@@ -33,7 +33,7 @@ function generatePassword() {
       password += special[Math.floor(Math.random() * special.length)]
       sub = 4
       // block of code to be executed if the condition1 is false and condition2 is false
-    }else if (parseInt(characters) < 1|| parseInt(characters) > 3){
+    } else if (parseInt(characters) < 1|| parseInt(characters) > 3){
       alert("Make sure to write a number from 1 to 3")
       generatePassword()
 
