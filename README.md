@@ -1,4 +1,4 @@
-# Password Generator 
+
 
 # [Password Generator](https://shawnjoseph1.github.io/password-generator-/)
 > A secure random password generator that
