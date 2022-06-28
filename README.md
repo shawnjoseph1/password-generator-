@@ -1,6 +1,6 @@
 # Password Generator 
 
-# [Password Generator]()
+# [Password Generator](https://shawnjoseph1.github.io/password-generator-/)
 > A secure random password generator that
   runs inside your browser.
   
@@ -10,4 +10,4 @@ browser.
 
 
 # Link
-
+https://shawnjoseph1.github.io/password-generator-/
