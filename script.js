@@ -10,48 +10,32 @@ function generatePassword() {
   var sub = 0
 
   
-  if (characters == "1") {
-      all = lowercase + uppercase
-      password += lowercase[Math.floor(Math.random() * lowercase.length)]
-      password += uppercase[Math.floor(Math.random() * uppercase.length)]
-      sub = 2
-      
-      // block of code to be executed if condition1 is true
-    } else if (characters == "2") {
+  switch (characters) {
+    case "1":
+      all = lowercase + uppercase;
+      sub = 1;
+      break;
+    case "2":
+      all = lowercase + uppercase + numbers;
+      sub = 2;
+      break;
+    case "3":
+      all = lowercase + uppercase + numbers + special;
+      sub = 3;
+      break;
+      default:
+      alert("Make sure to write a number from 1 to 3");
+      break;
+  }
 
-      all = lowercase + uppercase + numbers
-      password += lowercase[Math.floor(Math.random() * lowercase.length)]
-      password += uppercase[Math.floor(Math.random() * uppercase.length)]
-      password += numbers[Math.floor(Math.random() * numbers.length)]
-      sub = 3
-      // block of code to be executed if the condition1 is false and condition2 is true
-    } else if (characters == "3") {
-      all = lowercase + uppercase + numbers + special
-      password += lowercase[Math.floor(Math.random() * lowercase.length)]
-      password += uppercase[Math.floor(Math.random() * uppercase.length)]
-      password += numbers[Math.floor(Math.random() * numbers.length)]
-      password += special[Math.floor(Math.random() * special.length)]
-      sub = 4
-      // block of code to be executed if the condition1 is false and condition2 is false
-    } else if (parseInt(characters) < 1|| parseInt(characters) > 3){
-      alert("Make sure to write a number from 1 to 3")
-      generatePassword()
-
+  var length = prompt("How many characters would you like your password to be? choose a number between 8 and 128");
+  if (length < 8 || length > 128) {
+    alert("Make sure to write a number from 8 to 128");
+  } else {
+    for (var i = 0; i < length; i++) {
+      password += all.charAt(Math.floor(Math.random() * all.length));
     }
-  
-  let passwordLength = prompt("How many characters would you like? Choose a number between 8 and 128.");
-  if (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128){
-    alert("Make sure to write a number from 8 to 128")
-    generatePassword()
-
-
   }
-  for (var i = 0; i < parseInt(passwordLength) - sub; i++) {
-    password += all.charAt(Math.floor(Math.random() * all.length));
-    //console.log(password)
-  }
- 
-  
   return password;
 }
 
@@ -67,3 +51,6 @@ function writePassword() {
 }
 
 generateBtn.addEventListener("click", writePassword);
+
+
+
