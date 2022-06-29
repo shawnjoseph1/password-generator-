@@ -6,7 +6,7 @@ function generatePassword() {
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var all = ""
-  var characters = prompt("Which characters would you like your password to include?\n 1 = Letters only (A-Z) \n 2 = Letters and numbers (A-Z+1-0) \n 3 = Letters, numbers, and special characters (A-Z+1-0+@#!$)");
+  var characters = prompt("Which characters would you like your password to include?\n Type in the number 1 for letters only (A-Z)\n Type in the number 2 for letters and numbers only (A-Z+1-0) \n Type in the number 3 for letters, numbers, and special characters (A-Z + 1-0 + @#=!+)");
   var sub = 0
 
   
